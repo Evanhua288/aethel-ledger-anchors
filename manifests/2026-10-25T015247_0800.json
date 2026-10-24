@@ -1,0 +1,217 @@
+{
+ "v": 1,
+ "when": "2026-10-25T01:52:47+0800",
+ "new_count": 3,
+ "records": [
+  {
+   "v": 1,
+   "when": "2026-10-24T23:01:23+0800",
+   "root": "b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "nonce": 4825348582433495007,
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 5586,
+     "last_index": 5586,
+     "last_entry_hash": "9d414483f95b03741062b65cbae84ad9015ed1d604f4011c0872129eb3238945"
+    },
+    {
+     "chain": "admin-ops",
+     "present": true,
+     "rows": 217,
+     "last_index": 216,
+     "last_entry_hash": "912b04c4286fa008f84544f97334f19d72f92722d89a49b51d79eef1f6251d6c"
+    },
+    {
+     "chain": "anchor",
+     "present": true,
+     "rows": 18,
+     "last_index": null,
+     "last_entry_hash": null
+    },
+    {
+     "chain": "sandbox",
+     "present": true,
+     "rows": 2055,
+     "last_index": 2054,
+     "last_entry_hash": "046c314e65cad4e3b2f283638b33096cd74674ca0f5079afbb2f9ef927a448b6"
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": true,
+     "rows": 396,
+     "last_index": 395,
+     "last_entry_hash": "82aa2dbd7cef175ec00290925f7ae723b838bef1c4599e8c7a35037fd1bc0fc1"
+    },
+    {
+     "chain": "task-market",
+     "present": true,
+     "rows": 2413,
+     "last_index": 2412,
+     "last_entry_hash": "7b5d395749e95e265b0f369b78a6720e1de4bfdf0413ba085398607ac1786601"
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "7e7a50e4af9ef160d6b63c9a26a5ba25c19a39ff0504244272ecbe02cb14abdd",
+   "tsq_sha256": "21ed09d292de82d6e7d1398a034cb218c2381b8ed46cc030d3b5de2382c4d897",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "首次外部锚（Evan 2026-10-24 22:5x 批准出网）",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  },
+  {
+   "v": 1,
+   "when": "2026-10-24T23:03:25+0800",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "nonce": 9158908529545923621,
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 5586,
+     "last_index": 5586,
+     "last_entry_hash": "9d414483f95b03741062b65cbae84ad9015ed1d604f4011c0872129eb3238945",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "admin-ops",
+     "present": true,
+     "rows": 217,
+     "last_index": 216,
+     "last_entry_hash": "912b04c4286fa008f84544f97334f19d72f92722d89a49b51d79eef1f6251d6c",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "anchor",
+     "present": true,
+     "rows": 18,
+     "last_index": null,
+     "last_entry_hash": "ee18e73803a0ff9818c40bde181946d2fa4039e8fc14232528f76340b7a219a8",
+     "hash_field": "head_hash"
+    },
+    {
+     "chain": "sandbox",
+     "present": true,
+     "rows": 2055,
+     "last_index": 2054,
+     "last_entry_hash": "046c314e65cad4e3b2f283638b33096cd74674ca0f5079afbb2f9ef927a448b6",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": true,
+     "rows": 396,
+     "last_index": 395,
+     "last_entry_hash": "82aa2dbd7cef175ec00290925f7ae723b838bef1c4599e8c7a35037fd1bc0fc1",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "task-market",
+     "present": true,
+     "rows": 2413,
+     "last_index": 2412,
+     "last_entry_hash": "7b5d395749e95e265b0f369b78a6720e1de4bfdf0413ba085398607ac1786601",
+     "hash_field": "entry_hash"
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "ded86f80fef742287608a370567c262db0cff71ba397384d2daee1a9028f987e",
+   "tsq_sha256": "46d8b07f4dd1bea05205daace2850ef23da64d1c40c44db08a1d1060440b79b2",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "第二次锚（含 hash_field 回落，anchor 链改用 head_hash）",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  },
+  {
+   "v": 1,
+   "when": "2026-10-25T00:03:35+0800",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "nonce": 1986549972991630989,
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 5586,
+     "last_index": 5586,
+     "last_entry_hash": "9d414483f95b03741062b65cbae84ad9015ed1d604f4011c0872129eb3238945",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "admin-ops",
+     "present": true,
+     "rows": 217,
+     "last_index": 216,
+     "last_entry_hash": "912b04c4286fa008f84544f97334f19d72f92722d89a49b51d79eef1f6251d6c",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "anchor",
+     "present": true,
+     "rows": 18,
+     "last_index": null,
+     "last_entry_hash": "ee18e73803a0ff9818c40bde181946d2fa4039e8fc14232528f76340b7a219a8",
+     "hash_field": "head_hash"
+    },
+    {
+     "chain": "sandbox",
+     "present": true,
+     "rows": 2055,
+     "last_index": 2054,
+     "last_entry_hash": "046c314e65cad4e3b2f283638b33096cd74674ca0f5079afbb2f9ef927a448b6",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": true,
+     "rows": 396,
+     "last_index": 395,
+     "last_entry_hash": "82aa2dbd7cef175ec00290925f7ae723b838bef1c4599e8c7a35037fd1bc0fc1",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "task-market",
+     "present": true,
+     "rows": 2413,
+     "last_index": 2412,
+     "last_entry_hash": "7b5d395749e95e265b0f369b78a6720e1de4bfdf0413ba085398607ac1786601",
+     "hash_field": "entry_hash"
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "aa7e2b8d8fdd5a8c126dee119eb87635d695bd2f1788b4761ec8fa6dbbf8d8dd",
+   "tsq_sha256": "0e60ebc7cef9c41e3e32ba5afe16e4010c81e7cb049506c63490a9d872eea7cf",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "EXTERNAL-ANCHOR-002 上线首锚",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  }
+ ],
+ "anchors_total": 3,
+ "anchors_sha256": "694208143ebe39f4dfdb31c33f5a3ff3fdf07b04ce2d67839e6ecbfd49442fe2",
+ "prev_index_head": null
+}
