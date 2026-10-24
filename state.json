@@ -4,12 +4,12 @@
  "index_n": 2,
  "index_head": "9e02038b008b4e4334315004e62bf8aa75a91bc1e34dc983567e594cb733167f",
  "new_count": 0,
- "published": false,
- "index_sha256": null,
- "remote_commit": "4f7c7f313be581027a686f205889a8531ed9f563",
- "remote_error": "建树失败 HTTP 400 {\"message\": \"We received a malformed request from your client. Sorry about that. Please try resubmitting your request and contact us if the problem persists.\"}\r\n",
- "local_commit": "e8999ac834f5a65f24e99354917c2b2f1d4b3adf",
+ "published": true,
+ "index_sha256": "15093c6f8ece014d744b42b696d6c2da4a973eff2cee1d10bc0aafbd95110864",
+ "remote_commit": "263fce6a12128cf28736f9f2b8d3916d05fbbf21",
+ "remote_error": null,
+ "local_commit": "67fc2ab1f1a9dbadf6ddf2d7607fe53fc128a02a",
  "ots_stamped": true,
  "ots_file": "index-15093c6f8ece014d.ots",
- "ts": "2026-10-25T02:10:17+0800"
+ "ts": "2026-10-25T02:11:07+0800"
 }
