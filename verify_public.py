@@ -222,9 +222,39 @@ def check_coverage(root, index, manifests):
     return bad
 
 
+def _ots_detail(path):
+    """解一个 .ots：它证明了谁的指纹、有没有进比特币、还挂在哪个日历上。
+
+    需要 opentimestamps 库；没装就返回 None（本验证器的主体检证只用标准库，
+    这一步是加分项，不做断言）。
+    """
+    try:
+        from opentimestamps.core.notary import (BitcoinBlockHeaderAttestation,
+                                                PendingAttestation)
+        from opentimestamps.core.serialize import BytesDeserializationContext
+        from opentimestamps.core.timestamp import DetachedTimestampFile
+    except Exception:                            # noqa: BLE001
+        return None
+    try:
+        with open(path, "rb") as f:
+            det = DetachedTimestampFile.deserialize(
+                BytesDeserializationContext(f.read()))
+    except Exception as e:                       # noqa: BLE001
+        return {"error": "%s: %s" % (type(e).__name__, e)}
+    blocks, pending = set(), 0
+    for _msg, att in det.timestamp.all_attestations():
+        if isinstance(att, BitcoinBlockHeaderAttestation):
+            blocks.add(att.height)
+        elif isinstance(att, PendingAttestation):
+            pending += 1
+    return {"blocks": sorted(blocks), "pending": pending,
+            "digest": det.timestamp.msg.hex()}
+
+
 def report_ots(root, index):
     """--ots：看时间戳证明在不在、有没有上链（不做断言，只如实报）。"""
     import glob
+    import hashlib
 
     files = sorted(glob.glob(os.path.join(root, "ots", "*.ots")))
     print("\n[时间戳证明]")
@@ -232,12 +262,47 @@ def report_ots(root, index):
         print("  没有 .ots 文件——说明一次都没提交过，或者被删了（删了也验得出："
               "索引还在，证明不在）")
         return
+    idx_path = os.path.join(root, "index.jsonl")
+    cur = None
+    if os.path.exists(idx_path):
+        with open(idx_path, "rb") as f:
+            cur = hashlib.sha256(f.read()).hexdigest()
+    hit = None
     for p in files:
-        print("  %-40s %d 字节" % (os.path.basename(p), os.path.getsize(p)))
-    print("  想看比特币区块高度，用官方工具：")
+        d = _ots_detail(p)
+        name = os.path.basename(p)
+        if d is None:
+            print("  %-40s %d 字节" % (name, os.path.getsize(p)))
+            continue
+        if "error" in d:
+            print("  %-40s 读不出来（%s）" % (name, d["error"]))
+            continue
+        if d["blocks"]:
+            state = "已进比特币第 %s 块" % ("、".join(str(b) for b in d["blocks"]))
+        else:
+            state = "尚未进块（还挂在公共日历上，等确认）"
+        mark = ""
+        if cur and d["digest"] == cur:
+            mark = "  ← 就是当前这份索引"
+            hit = d
+        print("  %-40s %s%s" % (name, state, mark))
+
+    if cur is None:
+        pass
+    elif hit and hit["blocks"]:
+        print("\n  结论：**当前这份 index.jsonl 已被比特币第 %s 块见证**——"
+              "它写于那些区块之前，事后改动会在指纹上露馅。"
+              % "、".join(str(b) for b in hit["blocks"]))
+    elif hit:
+        print("\n  结论：当前这份索引已提交但**还没进块**（等几小时到一天）。")
+    else:
+        print("\n  结论：仓里的证明对应的是更早的索引版本，当前这份还没提交过"
+              "（或提交了但证明没公开）。")
+
+    print("  自己复核（官方工具）：")
     print("    pip install opentimestamps-client")
     print("    ots upgrade <file>.ots   # 升级")
-    print("    ots verify  <file>.ots   # 校验")
+    print("    ots verify  <file>.ots   # 校验（会显示比特币区块高度）")
 
 
 # --------------------------------------------------------------------------
