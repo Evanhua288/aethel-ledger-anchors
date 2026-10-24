@@ -125,28 +125,79 @@ def check_roots(index, manifests):
     return bad
 
 
-def check_tokens(root, manifests):
-    """4. 令牌没被换：记录里的指纹 = 仓内实际文件指纹。"""
+def _load_records(root):
+    """全部已公开的锚记录（累积件），按 key 索引。"""
+    rows = read_jsonl(os.path.join(root, "anchors", "anchor-ext.jsonl"))
+    return {"%s|%s" % (r.get("when"), r.get("root")): r for r in rows}
+
+
+def check_evidence(root, manifests, gaps=None):
+    """4. 令牌没被换：登记表说的位置 × 记录里写的指纹 × 盘上实际文件，三者对齐。
+
+    登记表（registry）是每次发布会整份写入清单的快照，被清单指纹→索引哈希链
+    层层锁住，所以「某条原件从一开始就在」这件事没法事后改口。
+    """
     bad = []
-    for man in manifests:
-        if man is None:
+    gaps = gaps if gaps is not None else []
+    records = _load_records(root)
+    reg = None
+    for man in reversed([m for m in manifests if m]):
+        if man.get("registry"):
+            reg = man["registry"]
+            break
+    if reg is None:
+        return ["清单里没有证据件登记表（registry）——无法确认令牌原件是否齐备"]
+
+    covered = set()
+    for row in reg:
+        key = row.get("key")
+        covered.add(key)
+        rec = records.get(key)
+        if rec is None:
+            bad.append("登记表里的 %s 在累积件里找不到对应记录" % key)
             continue
-        for rec in man.get("records") or []:
-            for key, sha_key in (("tsq_file", "tsq_sha256"),
+        if not row.get("available"):
+            gaps.append("%s：%s（%s）" % (key, row.get("note") or "原件不可用",
+                                          "这是公开记录里已声明的缺口"))
+            continue
+        for field, sha_field in (("tsq_file", "tsq_sha256"),
                                  ("tsr_file", "tsr_sha256")):
-                rel = rec.get(key)
-                if not rel:
-                    continue
-                p = os.path.join(root, rel)
-                if not os.path.exists(p):
-                    bad.append("记录 when=%s 的 %s 不见了（%s）"
-                               % (rec.get("when"), key, rel))
-                    continue
-                with open(p, "rb") as f:
-                    got = sha_bytes(f.read())
-                if got != rec.get(sha_key):
-                    bad.append("记录 when=%s 的 %s 与 %s 不符"
-                               % (rec.get("when"), rel, sha_key))
+            rel = row.get(field)
+            if not rel:
+                bad.append("登记表说 %s 齐全，却没给 %s" % (key, field))
+                continue
+            p = os.path.join(root, rel)
+            if not os.path.exists(p):
+                bad.append("登记表说齐全，但 %s 不存在：%s" % (rel, key))
+                continue
+            want = rec.get(sha_field)
+            if not want:
+                bad.append("记录 %s 缺 %s，无法核验" % (key, sha_field))
+                continue
+            with open(p, "rb") as f:
+                if sha_bytes(f.read()) != want:
+                    bad.append("%s 的指纹与记录 %s 不符" % (rel, key))
+    missing = set(records) - covered
+    if missing:
+        bad.append("有 %d 条记录没有出现在证据件登记表里（第一条：%s）"
+                   % (len(missing), sorted(missing)[0]))
+    return bad
+
+
+def check_evidence_monotonic(manifests):
+    """登记表不许回退：一旦声明某件齐全，后面不许改口说缺。"""
+    bad = []
+    ever_ok = {}
+    for i, man in enumerate(manifests, 1):
+        if not man:
+            continue
+        for row in man.get("registry") or []:
+            k = row.get("key")
+            if row.get("available"):
+                ever_ok[k] = i
+            elif k in ever_ok:
+                bad.append("%s 在第 %d 次发布时是齐全的，第 %d 次却变成缺失"
+                           "（证据件不该越用越少）" % (k, ever_ok[k], i))
     return bad
 
 
@@ -225,11 +276,13 @@ def main():
     print("")
 
     failures = []
+    gaps = []
     steps = [
         ("发布链没断", lambda: check_index_chain(index)),
         ("清单没被换", lambda: check_manifests(root, checked)),
         ("总指纹算得对", lambda: check_roots(checked, manifests)),
-        ("令牌没被换", lambda: check_tokens(root, manifests)),
+        ("令牌没被换", lambda: check_evidence(root, manifests, gaps)),
+        ("登记表不许回退", lambda: check_evidence_monotonic(manifests)),
         ("记录不重不漏", lambda: check_coverage(root, checked, manifests)),
     ]
     for i, (name, fn) in enumerate(steps, 1):
@@ -243,6 +296,11 @@ def main():
             print("      - " + b)
         failures.extend(bad)
 
+    if gaps:
+        print("\n[已声明的缺口]（公开记录里主动写明「这份原件不在」，不是偷偷少一份）")
+        for g in gaps:
+            print("  - " + g)
+
     if a.ots:
         report_ots(root, index)
 
@@ -253,6 +311,9 @@ def main():
         return 1
     print("VERDICT=PASS  发布链完整、清单与令牌未被替换、总指纹与链事实一致、"
           "记录不重不漏")
+    if gaps:
+        print("（其中 %d 条记录的令牌原件已确认不可用，属于公开声明过的缺口；"
+              "它们锚定的状态仍由同一 root 的后继锚证明。）" % len(gaps))
     print("（这一步确认的是「公开记录自洽且没被动过」。它是否已被比特币见证，"
           "用 --ots 看，或用官方 ots 工具复核。）")
     return 0

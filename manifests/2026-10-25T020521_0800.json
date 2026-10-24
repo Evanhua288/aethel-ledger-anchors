@@ -1,0 +1,33 @@
+{
+ "v": 1,
+ "when": "2026-10-25T02:05:21+0800",
+ "new_count": 0,
+ "records": [],
+ "registry": [
+  {
+   "key": "2026-10-24T23:01:23+0800|b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "root": "b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "tsq_file": "tsq/b43b7ade14e6087e.tsq",
+   "tsr_file": "tsr/b43b7ade14e6087e.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-24T23:03:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": false,
+   "note": "tsq 原件指纹与记录不符；tsr 原件指纹与记录不符"
+  },
+  {
+   "key": "2026-10-25T00:03:35+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": true
+  }
+ ],
+ "anchors_total": 3,
+ "anchors_sha256": "694208143ebe39f4dfdb31c33f5a3ff3fdf07b04ce2d67839e6ecbfd49442fe2",
+ "prev_index_head": "70af9f02e5d7ee6a901eb7d1bca1cd285c237a339cc733aaf52ac7e7369c27ae"
+}
