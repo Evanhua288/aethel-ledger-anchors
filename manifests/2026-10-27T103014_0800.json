@@ -1,0 +1,115 @@
+{
+ "v": 1,
+ "when": "2026-10-27T10:30:14+0800",
+ "new_count": 1,
+ "records": [
+  {
+   "v": 1,
+   "when": "2026-10-27T10:30:11+0800",
+   "root": "f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "nonce": 3442398549932626317,
+   "tag": "f887e381fd97aaf9-2fc5db3e180dd18d",
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 39,
+     "last_index": 38,
+     "last_entry_hash": "154e0f7cbc1488fa5412ea733ce4e27dfba762f0efa05b549bf6dec438915f3b",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "admin-ops",
+     "present": false,
+     "rows": 0,
+     "last_index": null,
+     "last_entry_hash": null,
+     "hash_field": null
+    },
+    {
+     "chain": "anchor",
+     "present": false,
+     "rows": 0,
+     "last_index": null,
+     "last_entry_hash": null,
+     "hash_field": null
+    },
+    {
+     "chain": "sandbox",
+     "present": false,
+     "rows": 0,
+     "last_index": null,
+     "last_entry_hash": null,
+     "hash_field": null
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": false,
+     "rows": 0,
+     "last_index": null,
+     "last_entry_hash": null,
+     "hash_field": null
+    },
+    {
+     "chain": "task-market",
+     "present": false,
+     "rows": 0,
+     "last_index": null,
+     "last_entry_hash": null,
+     "hash_field": null
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "23897ce655ce29e40de9f1c772ff8edd6ce5fdbd3fc5c42e7dd39f1fe98ef614",
+   "tsq_sha256": "5a55046a609efdd7463cfd67b104576072d0012203f00c02f781e372607a73e0",
+   "tsq_file": "tsq/f887e381fd97aaf9-2fc5db3e180dd18d.tsq",
+   "tsr_file": "tsr/f887e381fd97aaf9-2fc5db3e180dd18d.tsr",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "定时锚",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  }
+ ],
+ "registry": [
+  {
+   "key": "2026-10-24T23:01:23+0800|b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "root": "b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "tsq_file": "tsq/b43b7ade14e6087e.tsq",
+   "tsr_file": "tsr/b43b7ade14e6087e.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-24T23:03:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": false,
+   "note": "tsq 原件指纹与记录不符；tsr 原件指纹与记录不符"
+  },
+  {
+   "key": "2026-10-25T00:03:35+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-27T10:30:11+0800|f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "root": "f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "tsq_file": "tsq/f887e381fd97aaf9-2fc5db3e180dd18d.tsq",
+   "tsr_file": "tsr/f887e381fd97aaf9-2fc5db3e180dd18d.tsr",
+   "available": true
+  }
+ ],
+ "anchors_total": 4,
+ "anchors_sha256": "d6a0f9fcad137787f547682a77454f18e0c8b381a9b5ff7979fb062a1e095e8b",
+ "prev_index_head": "9e02038b008b4e4334315004e62bf8aa75a91bc1e34dc983567e594cb733167f"
+}
