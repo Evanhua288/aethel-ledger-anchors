@@ -1,0 +1,143 @@
+{
+ "v": 1,
+ "when": "2026-10-30T11:07:10+0800",
+ "new_count": 1,
+ "records": [
+  {
+   "v": 1,
+   "when": "2026-10-30T11:07:09+0800",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "nonce": 7766977493405469049,
+   "tag": "007df42f7633d438-6bc9d8e108e30979",
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 5586,
+     "last_index": 5586,
+     "last_entry_hash": "9d414483f95b03741062b65cbae84ad9015ed1d604f4011c0872129eb3238945",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "admin-ops",
+     "present": true,
+     "rows": 217,
+     "last_index": 216,
+     "last_entry_hash": "912b04c4286fa008f84544f97334f19d72f92722d89a49b51d79eef1f6251d6c",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "anchor",
+     "present": true,
+     "rows": 18,
+     "last_index": null,
+     "last_entry_hash": "ee18e73803a0ff9818c40bde181946d2fa4039e8fc14232528f76340b7a219a8",
+     "hash_field": "head_hash"
+    },
+    {
+     "chain": "sandbox",
+     "present": true,
+     "rows": 2055,
+     "last_index": 2054,
+     "last_entry_hash": "046c314e65cad4e3b2f283638b33096cd74674ca0f5079afbb2f9ef927a448b6",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": true,
+     "rows": 396,
+     "last_index": 395,
+     "last_entry_hash": "82aa2dbd7cef175ec00290925f7ae723b838bef1c4599e8c7a35037fd1bc0fc1",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "task-market",
+     "present": true,
+     "rows": 2413,
+     "last_index": 2412,
+     "last_entry_hash": "7b5d395749e95e265b0f369b78a6720e1de4bfdf0413ba085398607ac1786601",
+     "hash_field": "entry_hash"
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "f3c3a0d1c8c6b772ffed2dbd849347f5a42788512e9a4c904dcf2a1116b3ff57",
+   "tsq_sha256": "1848866ba89504ea009b108e2dbc2fba7bf0b3c2156c85e44b3a631a4eccb243",
+   "tsq_file": "tsq/007df42f7633d438-6bc9d8e108e30979.tsq",
+   "tsr_file": "tsr/007df42f7633d438-6bc9d8e108e30979.tsr",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "定时锚",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  }
+ ],
+ "registry": [
+  {
+   "key": "2026-10-24T23:01:23+0800|b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "root": "b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "tsq_file": "tsq/b43b7ade14e6087e.tsq",
+   "tsr_file": "tsr/b43b7ade14e6087e.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-24T23:03:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": false,
+   "note": "tsq 原件指纹与记录不符；tsr 原件指纹与记录不符"
+  },
+  {
+   "key": "2026-10-25T00:03:35+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-27T10:30:11+0800|f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "root": "f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "tsq_file": "tsq/f887e381fd97aaf9-2fc5db3e180dd18d.tsq",
+   "tsr_file": "tsr/f887e381fd97aaf9-2fc5db3e180dd18d.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-26T01:34:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-48151236d06b2403.tsq",
+   "tsr_file": "tsr/007df42f7633d438-48151236d06b2403.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-28T10:54:29+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-44526774d2bbf9f7.tsq",
+   "tsr_file": "tsr/007df42f7633d438-44526774d2bbf9f7.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-29T11:06:26+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-1f646977877dd103.tsq",
+   "tsr_file": "tsr/007df42f7633d438-1f646977877dd103.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-30T11:07:09+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-6bc9d8e108e30979.tsq",
+   "tsr_file": "tsr/007df42f7633d438-6bc9d8e108e30979.tsr",
+   "available": true
+  }
+ ],
+ "anchors_total": 8,
+ "anchors_sha256": "978213626fad7418656e04d93ddd48689c5809c865a2b5c458e76c863bd231b1",
+ "prev_index_head": "6192087f46e6bd0ecc32b63a7dd6fa0e7dbaf2aa337923f8716dbfe3f299265a"
+}
