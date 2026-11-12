@@ -1,0 +1,241 @@
+{
+ "v": 1,
+ "when": "2026-11-12T13:36:13+0800",
+ "new_count": 1,
+ "records": [
+  {
+   "v": 1,
+   "when": "2026-11-12T13:36:12+0800",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "nonce": 4168867508095827055,
+   "tag": "dc04ed693b82a150-39dacae937b83c6f",
+   "chains": [
+    {
+     "chain": "portal-ops",
+     "present": true,
+     "rows": 5587,
+     "last_index": 5587,
+     "last_entry_hash": "44c7a768b2736d584b0a7a1cdb9874836e19101686eccb52019638fa5c6ffe94",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "admin-ops",
+     "present": true,
+     "rows": 217,
+     "last_index": 216,
+     "last_entry_hash": "912b04c4286fa008f84544f97334f19d72f92722d89a49b51d79eef1f6251d6c",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "anchor",
+     "present": true,
+     "rows": 18,
+     "last_index": null,
+     "last_entry_hash": "ee18e73803a0ff9818c40bde181946d2fa4039e8fc14232528f76340b7a219a8",
+     "hash_field": "head_hash"
+    },
+    {
+     "chain": "sandbox",
+     "present": true,
+     "rows": 2057,
+     "last_index": 2056,
+     "last_entry_hash": "70a506f86042a1731b04e8d10190df00a7eb58bdfda5d47abe9d0cd3547bcd48",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "sandbox-accounts",
+     "present": true,
+     "rows": 396,
+     "last_index": 395,
+     "last_entry_hash": "82aa2dbd7cef175ec00290925f7ae723b838bef1c4599e8c7a35037fd1bc0fc1",
+     "hash_field": "entry_hash"
+    },
+    {
+     "chain": "task-market",
+     "present": true,
+     "rows": 2415,
+     "last_index": 2414,
+     "last_entry_hash": "14490c5ffa8074a3d724f55b6c67024e620e07f227951ddb6de4e2b413786e59",
+     "hash_field": "entry_hash"
+    }
+   ],
+   "tsa": "freetsa",
+   "tsr_sha256": "7d12387ac849253ff66e53f8da30571631090bd5396bc069e0f54e33df91f306",
+   "tsq_sha256": "848654934c483d6e2ed64b044d364b2f4cb82e01c1a199a73e7492ee85ca0c1a",
+   "tsq_file": "tsq/dc04ed693b82a150-39dacae937b83c6f.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-39dacae937b83c6f.tsr",
+   "attempts": [
+    {
+     "tsa": "freetsa",
+     "url": "https://freetsa.org/tsr",
+     "http_status": 200,
+     "pki_status": 0,
+     "ok": true
+    }
+   ],
+   "note": "定时锚",
+   "ok": true,
+   "tsa_url": "https://freetsa.org/tsr"
+  }
+ ],
+ "registry": [
+  {
+   "key": "2026-10-24T23:01:23+0800|b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "root": "b43b7ade14e6087e167c86aa37a4cbf182301a7136f415b88da0ae895b2ed651",
+   "tsq_file": "tsq/b43b7ade14e6087e.tsq",
+   "tsr_file": "tsr/b43b7ade14e6087e.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-24T23:03:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": false,
+   "note": "tsq 原件指纹与记录不符；tsr 原件指纹与记录不符"
+  },
+  {
+   "key": "2026-10-25T00:03:35+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438.tsq",
+   "tsr_file": "tsr/007df42f7633d438.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-27T10:30:11+0800|f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "root": "f887e381fd97aaf93f228f86451ca62f4adb6bef23afb156e4852e239e8a1f09",
+   "tsq_file": "tsq/f887e381fd97aaf9-2fc5db3e180dd18d.tsq",
+   "tsr_file": "tsr/f887e381fd97aaf9-2fc5db3e180dd18d.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-26T01:34:25+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-48151236d06b2403.tsq",
+   "tsr_file": "tsr/007df42f7633d438-48151236d06b2403.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-28T10:54:29+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-44526774d2bbf9f7.tsq",
+   "tsr_file": "tsr/007df42f7633d438-44526774d2bbf9f7.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-29T11:06:26+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-1f646977877dd103.tsq",
+   "tsr_file": "tsr/007df42f7633d438-1f646977877dd103.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-30T11:07:09+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-6bc9d8e108e30979.tsq",
+   "tsr_file": "tsr/007df42f7633d438-6bc9d8e108e30979.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-10-31T11:36:35+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-3896a8151ace9cab.tsq",
+   "tsr_file": "tsr/007df42f7633d438-3896a8151ace9cab.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-01T12:02:44+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-287ad72dbaf3ff35.tsq",
+   "tsr_file": "tsr/007df42f7633d438-287ad72dbaf3ff35.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-01T13:18:38+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-669e739fb4f38857.tsq",
+   "tsr_file": "tsr/007df42f7633d438-669e739fb4f38857.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-02T12:19:58+0800|007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "root": "007df42f7633d438424d93ec64e8609a6135a9fca1459314e8d2e1c07965c0eb",
+   "tsq_file": "tsq/007df42f7633d438-2214d3dfe24c1a9f.tsq",
+   "tsr_file": "tsr/007df42f7633d438-2214d3dfe24c1a9f.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-03T12:46:30+0800|a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "root": "a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "tsq_file": "tsq/a98203c72a5207e2-49beb9f160a7d215.tsq",
+   "tsr_file": "tsr/a98203c72a5207e2-49beb9f160a7d215.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-04T12:52:45+0800|a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "root": "a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "tsq_file": "tsq/a98203c72a5207e2-7feb242ee301bfa9.tsq",
+   "tsr_file": "tsr/a98203c72a5207e2-7feb242ee301bfa9.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-05T13:16:11+0800|a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "root": "a98203c72a5207e28ecdefda5f6eb4f46b81af858ae9cb02c31bb23eedbc6fff",
+   "tsq_file": "tsq/a98203c72a5207e2-18abdb381c599735.tsq",
+   "tsr_file": "tsr/a98203c72a5207e2-18abdb381c599735.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-06T13:42:39+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-291805c43af45e8d.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-291805c43af45e8d.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-07T13:53:23+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-1443245fb041dd79.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-1443245fb041dd79.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-08T14:12:51+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-5a917976a7d76d57.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-5a917976a7d76d57.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-09T21:21:23+0800|334f7985ac6fd317ad05b738d3120ab77a1eaef6730cc37d352892b275332026",
+   "root": "334f7985ac6fd317ad05b738d3120ab77a1eaef6730cc37d352892b275332026",
+   "tsq_file": "tsq/334f7985ac6fd317-008e789a08a86963.tsq",
+   "tsr_file": "tsr/334f7985ac6fd317-008e789a08a86963.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-09T22:05:46+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-2bddd67ca90299eb.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-2bddd67ca90299eb.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-11T13:18:42+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-0cd1668e461f084b.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-0cd1668e461f084b.tsr",
+   "available": true
+  },
+  {
+   "key": "2026-11-12T13:36:12+0800|dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "root": "dc04ed693b82a1509b25f0e4492f22a59da3ffc0f169d10b7abe36472e0d6e67",
+   "tsq_file": "tsq/dc04ed693b82a150-39dacae937b83c6f.tsq",
+   "tsr_file": "tsr/dc04ed693b82a150-39dacae937b83c6f.tsr",
+   "available": true
+  }
+ ],
+ "anchors_total": 22,
+ "anchors_sha256": "c5c649f865de278816d4d8c8dd314804607116a2e7f72e50be375b01d36d0937",
+ "prev_index_head": "ad0ef5be59be7174875f7db2224ec9832db17be4f157c8e077dcb7ff39e25e79"
+}
